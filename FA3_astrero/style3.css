@@ -1,0 +1,49 @@
+* {
+	box-sizing:border-box;
+}
+
+body {
+	background-image: url("images/welchir.jpg");
+	background-repeat:no-repeat;
+	background-size: 100%;
+	margin:0;
+	padding-top:77.6px;
+}
+
+h1 {
+	text-align: center;
+	background-color: #B0C3D6;
+	font-family: Times New Roman;
+	border-width: 2px;
+	border: 2px dotted blue;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: auto;
+	margin-bottom: 20px;
+	box-sizing: 250px;
+	width: 250px;
+}	
+
+p {
+	text-align:justify;
+	background-color:hsl(263, 20%, 85%);
+	font-style:italic;
+	padding:20px;
+	border: 3px black;
+	border-top-style:dashed;
+	border-bottom-style:dotted;
+	border-left-style:solid;
+	border-right-style:double;
+	width:500px;
+	margin:auto;
+}
+
+span {
+	font-style: italic;
+	font-weight: bold;
+	color:rgb(83, 119, 109);
+	margin-left:2px;
+	margin-right:5px;
+}
