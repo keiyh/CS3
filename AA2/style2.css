@@ -1,0 +1,71 @@
+* {
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.section {
+	float: left;
+	width: 33%;
+}
+
+.article {
+	position: relative;
+	border: 1px solid black;
+	margin-left: 10px; 
+	margin-right: 10px;
+	background-color: #EEE;
+}
+	
+#noodles {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+	
+#chicken {
+	position: absolute;
+	text-align: center;
+	border: 1px solid black;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	background-color: yellow;
+}
+
+#beef {
+	position: absolute;
+	text-align: center;
+	border: 1px solid black;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	background-color: blue;
+}
+
+#pork {
+	position: absolute;
+	text-align: center;
+	border: 1px solid black;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	background-color: pink;
+}
+
+#section {
+	
+}
+
+#paragraph {
+	margin: 35px;
+}
+
+#article {
+	position: relative;
+	border: solid; 
+	border-width: 1px;
+	border-color: black;
+}
+
+
