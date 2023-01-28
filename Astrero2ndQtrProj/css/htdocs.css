@@ -1,0 +1,61 @@
+.homebutton {
+	float: left;
+}
+
+.cayenaimg, .cosetteimg, .cassisimg, .penelopeimg, .medeaimg, .roxanaimg, .raphaelimg{
+	float: left;
+	margin: 25px 30px 15px 20px;
+	border-radius: 10px;
+}
+
+aside {
+	padding-top: 0px;
+	margin-left: 30px;
+}
+
+#images {
+	clear:both;
+	text-align: center;
+	border-radius: 10px;
+	padding-bottom: 50px;
+}
+
+h1{
+	font-family: arial;
+	font-weight: bold;
+	text-shadow: 2px 1px 4.5px black;
+}
+
+h3{
+	font-family: times new roman;
+	font-size: 23px;
+	text-shadow: 2px 1px 4.5px black;
+}
+
+#content p {
+	font-weight: bold;
+}
+
+nav ul p {
+	font-family: times new roman;
+	font-weight: bold;
+	text-shadow: 2px 1px 4.5px black;
+}
+
+nav ul p li {
+	font-weight: bold;
+}
+h4 {
+	font-size: 20px;
+	padding-top: 50px;
+	text-align: center;
+	text-shadow: 2px 1px 4.5px black;
+}
+
+.cayena, .cosette, .cassis, .penelope, .medea, .roxana, .raphael {
+	border-radius: 10px;
+}
+
+body{
+	background-color: #CCDDE5;
+}	

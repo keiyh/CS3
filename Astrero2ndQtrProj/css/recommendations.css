@@ -1,0 +1,58 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #eee;
+}
+
+span {
+	text-align: center;
+	font-size: 15px;
+	color:gray;
+}
+
+#header {
+	position: fixed;
+	text-align: center;
+	background-color: #D2D8DD;
+	padding: 10px 10px;
+	margin-left: -8px;
+	margin-top: -23px;
+	width: 100%
+}
+.cosplayer {
+	float: left;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 5px;
+}
+
+.sprite {
+	margin-left: 45%;
+	background: url('../images/sprite1.png') no-repeat 0 0;
+	width: 100px;
+	height: 100px;
+}
+
+.sprite:hover {
+	background: url('../images/sprite1.png') no-repeat 0 -110px;
+	width: 100px;
+	height: 100px;
+}
+.sprite1 {
+	margin-left: 45%;
+	margin-top: 10px;
+	background: url('../images/sprite1.png') no-repeat -105px 0;
+	width: 100px;
+	height: 100px;
+}
+
+.sprite1:hover {
+	background: url('../images/sprite1.png') no-repeat -105px -110px;
+	width: 100px;
+	height: 100px;
+}
