@@ -1,0 +1,125 @@
+header {
+	font-family: arial;
+	font-weight: bold;
+}
+
+body {
+	padding-top: 0px;
+	background-color: #EAF2FF;
+	text-decoration: none;
+}
+
+header {
+	position: fixed;
+	width: 20%;
+	height: 110%;
+	border-right:2px dashed gray;
+	margin-left: -10px;
+	margin-top: -25px;
+	background-color: white;
+}
+
+h5 {
+	padding-left: 5px;
+	padding-top: 0px;
+	font-size: 100%;
+}
+
+
+label.logo{	
+	float: left;
+	clear:left;
+	text-align: center;
+	color: fff;
+	padding-left: 5px;
+	margin-top: 15px;
+	line-height: 100%;
+	font-weight: bold;
+}
+
+article a:hover {
+	background: #EAF2FF ;
+	opacity: .8;
+	transition: .5s;
+	color: green;
+}
+
+nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	color: #53776D;
+	font-size: 18px;
+	margin-left: 4%;
+	padding: 0px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+nav p{
+	color: #53776D;
+	border-radius: 3px;
+	text-transform: uppercase;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+nav p:hover {
+	color: gray;
+	transform: scale(1.3);
+	
+}
+
+.intro {
+	margin-left:270px;
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 17px;
+	padding-top: 20px;
+}
+#women, #men {
+	font-weight: bold;
+	font-size: 20px;
+}
+h1 {
+	margin-left:270px;
+	text-align: center;
+	padding: 10px 15px;
+	font-family: arial;
+	text-shadow: 5px 1px 5px gray;
+}
+
+h3 {
+	text-align:center;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+
+article {
+	padding-left: 270px;
+	display: block;
+	text-align: center;
+	border-radius:10px;
+	margin: 0px 0px 0px 0px;
+}
+
+.cayena, .cosette, .penelope, .medea, .roxana, .more, .raphael, .cassis {
+	border-radius:10px;
+	margin: 0px 10px 50px 10px;
+}
+
+hr {
+	text-align: center;
+	border-top: 0.5px solid #9CAEBF;
+	border-radius: 10px;
+}
+
+footer {
+	margin-left: 245px;
+	font-size: 10px;
+	text-align: center;
+	color:white;
+}

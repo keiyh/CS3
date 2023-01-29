@@ -1,0 +1,33 @@
+body {
+	background-color: #eee;
+}
+
+.cosplayer {
+	float: left;
+	margin-right: 20px;
+}
+
+.ref {
+	font-size: 25px;
+	font-family: arial;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+h3 {
+	font-weight: bold;
+	margin-top: 0px;
+ }
+ 
+p {
+	font-family: cambria;
+	padding-top: 15px;
+}
+
+.references {
+	font-size: 15px;
+	margin-left: 30px;
+}
+
+.twt, .fb, .ig, .arrow {
+	padding-bottom: 10px
+}
