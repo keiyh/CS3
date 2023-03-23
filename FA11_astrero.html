@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		var sideHeight
+		var x = prompt ("side A height");
+		var y = prompt ("side B height");
+		var z = prompt ("side C height");
+		
+		function determineTriangle(a,b,c) {
+			if (x == y && y==z && x==z) {
+				alert ("The triangle is an equilateral"); }
+			else if (x != y && y!=z && x!=z) {
+				alert ("The triangle is a scalene"); }
+			else {
+				alert ("The triangle is an isosceles"); }
+		}
+			determineTriangle();
+	</script>
+</body>
+</html>
+		
