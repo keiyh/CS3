@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Yna Keixa Astrero">
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+	<h2> You have <span id="nameLength"></span> characters</h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+	<button onclick="calculateFortune()">Ano ang fortune mo?</button>
+    
+
+<!-- JavaScript code -->
+	<script>
+		//we create a prompt in order to know the full name
+		var name = prompt("Input your desired name");
+		
+		//this displays our prompt
+		document.getElementById("thename").innerHTML = name;
+		
+		//a function to calcute your fortune
+		function calculateFortune() {
+		  const name = document.getElementById("thename").innerHTML;
+		  
+		  //function to know how many character a name has
+		  document.getElementById("nameLength").textContent = name.length;
+		  
+		 //function to breakdown name and count characters
+		let num = name.length;
+		while (num > 9) {
+			let sum = 0;
+			while (num > 0) {
+				sum += num % 10;
+				num = Math.floor(num / 10);
+		}
+		num = sum;
+	}
+		  
+		  //the calculateFortune function
+		  let fortune = "";
+		  switch (num) {
+			/* the assigned value for each case should correspond with the value of the name in order to display thats specific fortune */
+			case 0:
+			  fortune = "Ma crushback ka na soon";
+			  break;
+			case 1:
+			  fortune = "Mababayaran mo na utang mo sa canteen";
+			  break;
+			case 2:
+			  fortune = "Mauulanan ng pera";
+			  break;
+			case 3:
+			  fortune = "Uno sa Computer Science 3";
+			  break;
+			case 4:
+			  fortune = "May crush ka sa classroom noh?";
+			  break;
+			case 5:
+			  fortune = "You will get a well deserved break (amen)";
+			  break;
+			case 6:
+			  fortune = "DL this quarter woooohh";
+			  break;
+			case 7:
+			  fortune = "Magiging famoust in the near future omegs :00";
+			  break;
+			case 8:
+			  fortune = "You did a good job today";
+			  break;
+			case 9:
+			  fortune = "You will have a great day.";
+			  break;
+		  }
+		  
+		  //to display the fortune
+		  document.getElementById("fortune").textContent = fortune;
+		}
+	</script>
+</body>
+</html>
