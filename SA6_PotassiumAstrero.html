@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Yna Keixa Astrero">
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+	<body onload="generateOTP()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href=""> New OTP </a></h2>
+    <button onclick="b()"> Enter the OTP as shown above </button>
+	<a onclick="generateOTP()" </a>
+    
+    <script>
+	
+    	/* do not forget to include comments in your answer */
+		function generateOTP(){
+			// function that generates a random 6-digit number
+			var OTP = Math.floor(Math.random() * 900000) + 100000;
+			// displays the OTP 
+			document.getElementById("otp").innerHTML = OTP;
+		}
+		
+		function b() {
+			var confirm = prompt("Enter One-Time Password");		
+			// get the previous generated OTP to compare with user input
+			var generatedOTP = document.getElementById("otp").innerHTML;			
+			// to check if the OTPs match
+			if(confirm === generatedOTP){
+				window.open("https://youtu.be/osmHArcf_aE");
+			}else{
+				alert("OTP is incorrect. Try again.");
+				}
+			}
+    </script
+</body>
+</html>
