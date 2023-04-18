@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#mulTable, td{
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+	<p> enter a number between 2 and 10 </p>
+	<input id="inp1" type = "number" min="2" max="10">
+	<input id="inp2" type = "number" min="2" max="10">
+	<button onclick="mulTable()"> click to start </button>
+	<table id="mulTable"></table>
+	
+	<script>
+	function mulTable() {
+		var inp1 = document.getElementById("inp1").value;
+		var inp2 = document.getElementById("inp2").value;
+		
+		if (inp1<2 || inp1 >10 || inp2<2 || inp2>10) {
+			alert("wrong input, choose a number from 2 to 10 once again");
+			document.getElementById("mulTable").innerHTML = "";
+			return;
+		}
+	
+	var table = "<table>";
+		for (var i = 1 ; i <=inp1; i++) {
+			table += "<tr>";
+			for (var j=1; j<=inp2; j++) {
+				table += "<td>" + i*j+"</td>";
+				}
+				table += "</tr>"; 
+				} 
+				table += "</table>";
+				document.getElementById("mulTable").innerHTML = table; }
+			
+	</script>
+</body>
+</html>
