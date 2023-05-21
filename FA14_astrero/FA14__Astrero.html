@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign-up sheet</title>
+		<style>
+			* {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: black;
+				color: white;
+				font-size: 14px;
+				font-family: verdana;
+				padding: 3px;
+			}
+			
+			.red-border {
+				border: 2px solid red;
+			}
+			.green-border {
+				border: 2px solid green;
+			}
+			
+			.formsignup {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+			}
+			
+			form {
+				margin-top: 20px;
+			}
+			
+			fieldset {
+				background-image: url('bg2.jpg');
+				width: 500px;
+				height: 450px;
+				padding: 30px;
+			}
+			
+			button {
+				margin-top: 30px;
+				font-size: 18px;
+			}
+			
+			button[type="reset"] {
+				margin-left: 5px;
+			}
+			button:hover {
+				background-color:white;
+				color: black;
+				opacity: .8;
+				transition: .5s;
+				transform: scale(1.1);
+			}
+			
+			label {
+				font-size: 15px;
+				font-weight: bold;
+				border-radius: 5px;
+				padding: 5px;
+			}
+			
+			label:hover {
+				background-color:white;
+				color: black;
+				opacity: .8;
+				transition: .5s;
+				transform: scale(1.1);
+			}
+			
+			legend {
+				font-weight: bold;
+				font-size: 25px;
+				border-radius: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			#interest {
+				margin-top: 10px;
+			}
+			
+			#name {
+				margin-top: 10px;
+			}
+			
+			#output {
+				font-size: 15px;
+				font-weight: bold;
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				border: 2px dashed white;
+				padding: 20px;
+				width: 500px
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="formsignup">
+		<form id="signup-form">
+			<fieldset>
+				<legend>Sign Up</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required onblur="checkInput(this)" onfocus="resetInput(this)"><br><br>
+	  
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required onblur="checkInput(this)" onfocus="resetInput(this)"><br><br>
+	
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender" required onblur="checkInput(this)" onfocus="resetInput(this)">
+					<option value="" disabled selected>Select gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="prefer not to mention">Prefer not to mention</option>
+				</select><br><br>
+
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required onblur="checkInput(this)" onfocus="resetInput(this)"><br><br>
+
+				<label for="email">Email Address:</label>
+				 <input type="email" id="email" name="email" required onblur="checkInput(this)" onfocus="resetInput(this)"><br><br>
+
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" rows="4" cols="50" required onblur="checkInput(this)" onfocus="resetInput(this)"><br><br>
+				
+				<label for="interest">Interest:</label><br>
+				<textarea id="interest" name="interest" rows="4" cols="50" required onblur="checkInput(this)" onfocus="resetInput(this)"></textarea><br><br>
+			</fieldset>
+
+			<button type="submit">Sign Up</button>
+			<button type="reset">Reset</button>
+		</form>
+		</div>
+  
+		<div id="output"></div>
+		
+	<script>
+		const form = document.getElementById("signup-form");
+		const inputs = form.querySelectorAll("input, select, textarea");
+		const output = document.getElementById("output");
+	
+		function checkInput(input) {
+			if (input.value === "") {
+				input.classList.add("red-border");
+			} else {
+				input.classList.remove("red-border");
+				input.classList.add("green-border");
+			}
+		}
+		
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			if (isFormValid()) {
+				displayUserData();
+			} else {
+				alert("Please fill in all the required information.");
+			}
+		});
+		
+		form.addEventListener("reset", function() {
+			clearForm();
+			clearOutput();
+		});
+		
+		function isFormValid() {
+			let isValid = true;
+			inputs.forEach(function(input) {
+				if (input.hasAttribute("required") && input.value === "") {
+					isValid = false;
+					input.classList.add("red-border");
+				}
+			});
+			return isValid;
+		}
+		
+		function displayUserData() {
+			const userData = {
+				Name: document.getElementById("name").value,
+				Username: document.getElementById("username").value,
+				Gender: document.getElementById("gender").value,
+				Password: document.getElementById("password").value,
+				Email: document.getElementById("email").value,
+				Address: document.getElementById("address").value,
+				Interest: document.getElementById("interest").value
+			};
+
+			let outputText = "";
+			for (const [key, value] of Object.entries(userData)) {
+				outputText += `${key}: ${value}<br>`;
+			}
+
+			output.innerHTML = outputText;
+		}
+
+		function clearForm() {
+			inputs.forEach(function(input) {
+				input.classList.remove("red-border");
+				input.classList.remove("green-border");
+			});
+		}
+
+		function clearOutput() {
+			output.innerHTML = "";
+		}
+	
+		function resetInput(input) {
+			input.classList.remove("red-border");
+			input.classList.remove("green-border");
+		}	
+	
+	</script>
+</body>
+</html>
+
